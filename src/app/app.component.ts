@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'THE PLANET of the APENS';
+  title = 'THE dawn of THE PLANET of the aPes';
+  post = {
+    title: "Title",
+    isFavorite: true
+  }
 }
