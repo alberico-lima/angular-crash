@@ -1,3 +1,7 @@
 .starSize{
-    font-size: 40px;
+    font-size: 40px;   
+}
+
+.glyphicon{
+    color: rgb(255, 0, 0);
 }

@@ -4,24 +4,23 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   selector: 'favorite',
   templateUrl: './favourite.component.html',
   styleUrls: ['./favourite.component.css'],
-  inputs: ['isFavorite']
+  styles: [
+    `
+    .glyphicon{
+      color: green;
+  }    
+    `
+  ]
 })
-export class FavouriteComponent implements OnInit {
 
- @Input('isFavorite') isFavorite: boolean;
+export class FavouriteComponent {
 
-  constructor() {
-
-   }
-
-@Output() change = new EventEmitter   
-
-  ngOnInit(): void {
-  }
-
-  onClick(){
-    this.isFavorite = !this.isFavorite;
-    this.change.emit({newValeu: this.isFavorite});
-  }
+    @Input('isFavorite') isFavorite: boolean;
+    @Output() change = new EventEmitter   
+      
+    onClick(){
+      this.isFavorite = !this.isFavorite;
+      this.change.emit({newValeu: this.isFavorite});
+    }
 
 }
